@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<sdf version="1.6"><model name="zone_marker"><static>true</static><link name="marker">
+  <visual name="north"><pose>0 0.068 0 0 0 0</pose><geometry><box><size>0.14 0.004 0.001</size></box></geometry><material><ambient>0.93 0.93 0.93 1</ambient><diffuse>0.93 0.93 0.93 1</diffuse></material></visual>
+  <visual name="south"><pose>0 -0.068 0 0 0 0</pose><geometry><box><size>0.14 0.004 0.001</size></box></geometry><material><ambient>0.93 0.93 0.93 1</ambient><diffuse>0.93 0.93 0.93 1</diffuse></material></visual>
+  <visual name="east"><pose>0.068 0 0 0 0 0</pose><geometry><box><size>0.004 0.14 0.001</size></box></geometry><material><ambient>0.93 0.93 0.93 1</ambient><diffuse>0.93 0.93 0.93 1</diffuse></material></visual>
+  <visual name="west"><pose>-0.068 0 0 0 0 0</pose><geometry><box><size>0.004 0.14 0.001</size></box></geometry><material><ambient>0.93 0.93 0.93 1</ambient><diffuse>0.93 0.93 0.93 1</diffuse></material></visual>
+</link></model></sdf>

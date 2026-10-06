@@ -1,0 +1,233 @@
+world_frame: world
+planning_group: ur_manipulator
+eef_link: gripper_tcp
+move_action: /move_action
+execute_action: /execute_trajectory
+apply_scene_service: /apply_planning_scene
+planning_pipeline: ''
+planner_id: ''
+planning_time_sec: 6.0
+planning_attempts: 10
+velocity_scaling: 0.04
+acceleration_scaling: 0.04
+orientation_tolerance_rad: 0.18
+approach_height_m: 0.12
+grasp_clearance_m: 0.002
+place_clearance_m: 0.002
+home_joint_tolerance_rad: 0.06
+home_joint_positions:
+  shoulder_pan_joint: 0.0
+  shoulder_lift_joint: -1.57
+  elbow_joint: 0.0
+  wrist_1_joint: -1.57
+  wrist_2_joint: 0.0
+  wrist_3_joint: 0.0
+tool_orientation_xyzw:
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+table:
+  center_xyz:
+  - 0.52
+  - 0.0
+  - 0.48
+  size_xyz:
+  - 0.8
+  - 0.78
+  - 0.04
+  pedestal_center_xyz:
+  - 0.0
+  - 0.0
+  - 0.325
+  pedestal_size_xyz:
+  - 0.18
+  - 0.18
+  - 0.65
+zones:
+  zone_a:
+    label_en: Zone A
+    label_vi: vùng A
+    surface_xyz:
+    - 0.43
+    - -0.16
+    - 0.5
+    center_xyz:
+    - 0.43
+    - -0.16
+    - 0.5
+    size_xy:
+    - 0.14
+    - 0.14
+  zone_b:
+    label_en: Zone B
+    label_vi: vùng B
+    surface_xyz:
+    - 0.43
+    - 0.0
+    - 0.5
+    center_xyz:
+    - 0.43
+    - 0.0
+    - 0.5
+    size_xy:
+    - 0.14
+    - 0.14
+  zone_c:
+    label_en: Zone C
+    label_vi: vùng C
+    surface_xyz:
+    - 0.43
+    - 0.16
+    - 0.5
+    center_xyz:
+    - 0.43
+    - 0.16
+    - 0.5
+    size_xy:
+    - 0.14
+    - 0.14
+temporary_slots:
+  temp_1:
+    label_en: temporary slot 1
+    surface_xyz:
+    - 0.43
+    - -0.08
+    - 0.5
+    position_xyz:
+    - 0.43
+    - -0.08
+    - 0.5
+    occupancy_radius_m: 0.055
+  temp_2:
+    label_en: temporary slot 2
+    surface_xyz:
+    - 0.43
+    - 0.08
+    - 0.5
+    position_xyz:
+    - 0.43
+    - 0.08
+    - 0.5
+    occupancy_radius_m: 0.055
+camera:
+  position_xyz:
+  - 0.52
+  - 0.0
+  - 1.6
+  yaw_rad: 0.0
+  image_size:
+  - 640
+  - 480
+  horizontal_fov_rad: 1.2
+  table_surface_z: 0.5
+  image_right_axis_world:
+  - 0.0
+  - -1.0
+  image_down_axis_world:
+  - -1.0
+  - 0.0
+objects:
+  red_cube:
+    label_en: red_cube
+    label_vi: khối đỏ
+    position_xyz:
+    - 0.43
+    - -0.16
+    - 0.52
+    size_xyz:
+    - 0.04
+    - 0.04
+    - 0.04
+    hsv_ranges:
+    - - 0
+      - 120
+      - 70
+      - 10
+      - 255
+      - 255
+    - - 170
+      - 120
+      - 70
+      - 179
+      - 255
+      - 255
+  yellow_cube:
+    label_en: yellow_cube
+    label_vi: khối vàng
+    position_xyz:
+    - 0.43
+    - 0.16
+    - 0.52
+    size_xyz:
+    - 0.04
+    - 0.04
+    - 0.04
+    hsv_ranges:
+    - - 18
+      - 100
+      - 90
+      - 38
+      - 255
+      - 255
+  blue_cube:
+    label_en: blue_cube
+    label_vi: khối xanh lam
+    position_xyz:
+    - 0.43
+    - 0.0
+    - 0.52
+    size_xyz:
+    - 0.04
+    - 0.04
+    - 0.04
+    hsv_ranges:
+    - - 95
+      - 100
+      - 70
+      - 135
+      - 255
+      - 255
+  green_cube:
+    label_en: green_cube
+    label_vi: khối xanh lá
+    position_xyz:
+    - 0.25
+    - -0.27
+    - 0.52
+    size_xyz:
+    - 0.04
+    - 0.04
+    - 0.04
+    hsv_ranges:
+    - - 42
+      - 90
+      - 55
+      - 88
+      - 255
+      - 255
+  purple_cube:
+    label_en: purple_cube
+    label_vi: khối tím
+    position_xyz:
+    - 0.25
+    - 0.27
+    - 0.52
+    size_xyz:
+    - 0.04
+    - 0.04
+    - 0.04
+    hsv_ranges:
+    - - 130
+      - 75
+      - 55
+      - 169
+      - 255
+      - 255
+gripper:
+  backend: gazebo_detachable
+  touch_links:
+  - gripper_tcp
+  - tool0
+  - flange
+  - wrist_3_link

@@ -1,0 +1,9 @@
+student_name: "Lục Văn Khoa"
+student_id: "23020748"
+assignments:
+  "0": {zone_a: red_cube, zone_b: yellow_cube, zone_c: blue_cube}
+  "1": {zone_a: red_cube, zone_b: blue_cube, zone_c: yellow_cube}
+  "2": {zone_a: yellow_cube, zone_b: red_cube, zone_c: blue_cube}
+  "3": {zone_a: yellow_cube, zone_b: blue_cube, zone_c: red_cube}
+  "4": {zone_a: blue_cube, zone_b: red_cube, zone_c: yellow_cube}
+  "5": {zone_a: blue_cube, zone_b: yellow_cube, zone_c: red_cube}
